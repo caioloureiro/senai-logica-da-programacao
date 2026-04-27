@@ -59,12 +59,9 @@ echo.
 set /p combo_opt=Sua escolha: 
 
 if "%combo_opt%"=="1" (
-    echo debug - Combo selecionado!
-    :: AQUI ESTAVA O ERRO: Adicionei aspas para proteger os parenteses
     set /a "total=(preco + 10) - 2"
     set lanche_final=%lanche% + COMBO
 ) else if "%combo_opt%"=="2" (
-    echo debug - Combo nao selecionado!
     set /a total=preco
     set lanche_final=%lanche%
 ) else (
