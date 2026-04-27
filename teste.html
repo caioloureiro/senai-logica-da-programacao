@@ -1,0 +1,60 @@
+<meta charset="utf-8"/>
+<style>
+    body{
+        background-color:black;
+        color:white;
+    }
+</style>
+
+<input class="valor"/>
+
+<button 
+    class="btn" 
+    onclick="mudarValor( document.querySelector('.valor').value )"
+>Atualizar</button>
+
+<div class="recebe"></div>
+
+<script>
+    let contagem = 0;
+
+    //if(){}else{}
+
+    let texto = 'Digite um número.';
+
+    document.querySelector('.recebe').innerHTML = texto;
+
+    function mudarValor( receberValor ){
+
+        document.querySelector('.recebe').innerHTML = '';
+
+        let novaContagem = receberValor;
+        let novoTexto = '';
+
+        if (isNaN(novaContagem)) {
+            novoTexto = 'Você deve digitar apenas números.';
+        }
+
+        if( novaContagem == 0 ){
+            novoTexto = 'A contagem é 0.<br/>Contagem: '+ novaContagem;
+        }
+
+        if( 
+            novaContagem >= 1 
+            && novaContagem < 5
+        ){
+            novoTexto = 'De 1 até 4. <br/>Contagem: '+ novaContagem;
+        }
+
+        if( novaContagem >= 5 ){
+            novoTexto = 'Maior que ou igual à 5.<br/>Contagem: '+ novaContagem;
+        }
+
+        if( novaContagem != 0 ){
+            novoTexto += '<p>Contagem é diferente de zero.</p>';
+        }
+
+        document.querySelector('.recebe').innerHTML = novoTexto;
+    
+    }
+</script>
