@@ -75,11 +75,6 @@ if "%combo_opt%"=="1" (
     goto combo
 )
 
-:: ----------DEBUG----------
-echo Total calculado: R$ %total%,00
-pause
-:: ----------DEBUG----------
-
 goto finalizar
 
 :: TELA 04: FINALIZACAO E NOTA FISCAL
@@ -93,9 +88,10 @@ echo.
 
 if not exist cupom_fiscal mkdir cupom_fiscal
 
-:: Gerar numero de serie (Baseado na hora)
-set "serie=%time:~0,2%%time:~3,2%%time:~6,2%"
-set "serie=%serie: =0%"
+:: Gerar numero de serie (Baseado na quantidade de arquivos + 1)
+for /f %%A in ('dir /b cupom_fiscal\*.txt 2^>nul ^| find /c /v ""') do set serie=%%A
+if "%serie%"=="" set serie=0
+set /a serie=%serie%+1
 set "arquivo=cupom_fiscal\cupom_%serie%.txt"
 
 :: Gerando o arquivo TXT
