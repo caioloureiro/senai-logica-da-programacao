@@ -1,0 +1,12 @@
+---------------------------------- 
+        BURGER TECH FISCAL         
+         SERIE: 3            
+---------------------------------- 
+CLIENTE: Caio Loureiro                 
+ITEM:    Super Burger + COMBO            
+COMBO:   Batata + Refri            
+DESCONTO: -R$ 2,00                 
+TOTAL:   R$ 28,00             
+---------------------------------- 
+   Data: 27/04/2026 - 16:42:39,00           
+---------------------------------- 

@@ -28,17 +28,23 @@ echo.
 set /p escolha=Digite o numero da opcao: 
 
 if "%escolha%"=="1" (
+
     set /a preco=20
     set lanche=Super Burger
+
 ) else if "%escolha%"=="2" (
+
     set /a preco=30
     set lanche=Mega Burger
+
 ) else (
+
     echo.
     echo [ERRO] Opcao invalida! Digite 1 ou 2.
     echo.
     pause
     goto cardapio
+
 )
 
 :: TELA 03: OFERTA DE COMBO (DECISAO)
@@ -59,17 +65,23 @@ echo.
 set /p combo_opt=Sua escolha: 
 
 if "%combo_opt%"=="1" (
+
     set /a "total=(preco + 10) - 2"
     set lanche_final=%lanche% + COMBO
+
 ) else if "%combo_opt%"=="2" (
+
     set /a total=preco
     set lanche_final=%lanche%
+
 ) else (
+
     echo.
     echo [ERRO] Opcao invalida! Digite 1 ou 2.
     echo.
     pause
     goto combo
+	
 )
 
 goto finalizar
