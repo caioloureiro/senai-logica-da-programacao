@@ -1,0 +1,94 @@
+<style>
+    body{
+        background-color:black;
+        color:white;
+    }
+</style>
+
+<p><input class="input01" type="text"/></p>
+<p><input class="input02" type="text"/></p>
+<p><button class="enviar" onclick="calcular()">Enviar</button></p>
+
+<div class="receber">Olá Mundo!</div>
+
+<script>
+    //alert("Olá Mundo!");
+    //console.log("devTools")
+    //receber.innerHTML = '';
+    //receber.innerHTML = 'Novo texto.';
+
+    function echo(texto){
+        let receber = document.querySelector(".receber");
+        receber.innerHTML += "<p>"+ texto +"</p>";
+    }
+
+    function calcular(){
+
+        //alert("início da função calcular()");
+
+        let input01 = Number(document.querySelector(".input01").value);
+        //alert(input01);
+        
+        let input02 = Number(document.querySelector(".input02").value);
+        //alert(input02);
+
+        // =    -> NÃO ACEITO NO IF
+        // ==   -> ESSE É O IGUAL DO IF
+        // ===  -> EXTREMAMENTE IGUAL
+        // !=   -> DIFERENTE
+        // !==  -> EXTREMAMENTE DIFERENTE
+        // >=   -> MAIOR OU IGUAL
+        // >    -> MAIOR
+        // <=   -> MENOR OU IGUAL
+        // <    -> MENOR
+        // &&   -> ADICIONAR CONDIÇÃO "ESSE E ESSE" ENTRA AQUI
+        // ||   -> CONDIÇÃO OU "ESSE OU ESSE" ENTRA AQUI
+
+        if (
+            typeof input01 !== 'number' 
+            || Number.isNaN(input01)
+            || input01 == ''
+        ) {
+            alert("Erro: O input01 não é um número válido.");
+            return;
+        }
+        
+        if (
+            typeof input02 !== 'number' 
+            || Number.isNaN(input02)
+            || input02 == ''
+        ) {
+            alert("Erro: O input02 não é um número válido.");
+            return;
+        }
+        
+        let somaInputs = input01 + input02;
+
+        let receber = document.querySelector(".receber");
+        receber.innerHTML = '';
+
+        echo(somaInputs);
+
+    }
+
+    echo("Novo texto!");
+
+    let primeiroNumero = 5;
+    let segundoNumero = 3;
+    let soma = primeiroNumero + segundoNumero;
+    echo(soma);
+
+    let numero = 1;
+    numero = 5; //vai ficar 5 agora
+    echo(numero)
+
+    const nomeRestaurante = "Burger Tech";
+    //nomeRestaurante = "Outro nome"; //Se habilitar esta linha vai dar erro
+    echo(nomeRestaurante);
+
+    let string = "10";
+    let string02 = "15";
+    let somarString = Number(string) + Number(string02);
+    echo(somarString);
+    
+</script>

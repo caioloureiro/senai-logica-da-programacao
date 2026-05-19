@@ -129,3 +129,16 @@ pause >nul
 
 start "" "%arquivo%"
 exit
+
+:: -----DEBUG------
+echo Cliente: %cliente%
+echo Escolha: %escolha%
+echo Lanche: %lanche%
+echo Preco: %preco%
+echo combo_opt: %combo_opt%
+echo total: %total%
+echo lanche_final: %lanche_final%
+echo serie: %serie%
+echo arquivo: %arquivo%
+pause
+:: -----DEBUG------

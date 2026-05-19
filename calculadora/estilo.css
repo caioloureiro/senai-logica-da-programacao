@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+    color:white;
+    padding:0;
+    margin:0;
+    font-family:'Segoe UI';
+}
+/* Comentário */
+.calculadora{
+    width:400px;
+    height:600px;
+    background-color:rgb(50,50,50);
+    margin:0 auto;
+    margin-top:5px;
+    border:1px solid white;
+    border-radius:10px;
+    padding: 10px;
+}
+.titulo{
+    font-size:40px;
+    line-height:70px;
+    text-align:center;
+    text-transform: uppercase;
+    margin-bottom:10px;
+}
+.tela{
+    width:100%;
+    height:70px;
+    background-color:black;
+    border-radius:5px;
+    margin-bottom:10px;
+}
+.inputTela{
+    border:0;
+    width:100%;
+    height:100%;
+    background-color:transparent;
+    color:white;
+    padding:10px;
+    font-size:40px;
+    font-weight:bold;
+    text-align:right;
+}
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+button {
+    height: 70px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: rgb(110, 110, 110);
+}
+.btn-operador {
+    background-color: #f97316;
+}
+.btn-especial {
+    background-color: #a5a5a5;
+    color: black;
+}
+.btn-igual {
+    background-color: #f97316;
+    grid-row: span 2;
+    height: 100%;
+}
+.btn-zero {
+    grid-column: span 2;
+}

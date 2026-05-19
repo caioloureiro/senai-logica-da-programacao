@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Burger Tech - Totem Shopping</title>
+    </head>
+    <body>
+
+        <link rel="stylesheet" href="estilo.css"/>
+
+        <div class="totem">
+
+            <div id="tela-login" class="tela">
+                <h1 class="logo">BURGER TECH</h1>
+                <p>Seja bem-vindo ao Totem!</p>
+                <input 
+                    type="text" 
+                    id="nome-cliente" 
+                    placeholder="Digite seu nome para começar"
+                >
+                <button 
+                    class="btn-proximo" 
+                    onclick="irParaCardapio()"
+                >INICIAR PEDIDO</button>
+            </div>
+
+            <div 
+                id="tela-cardapio" 
+                class="tela" 
+                style="display: none;"
+            >
+                <h2>Olá, <span id="span-nome"></span>!</h2>
+                <p>Escolha seu lanche:</p>
+                <div class="grade-botoes">
+                    <button 
+                        onclick="selecionarLanche('Super Burger', 20)"
+                    >Super Burger <br> R$ 20</button>
+                    <button 
+                        onclick="selecionarLanche('Mega Burger', 30)"
+                    >Mega Burger <br> R$ 30</button>
+                </div>
+            </div>
+
+            <div 
+                id="tela-combo" 
+                class="tela" 
+                style="display: none;"
+            >
+                <h2>Deseja Combo?</h2>
+                <p>Batata + Refri por apenas +R$ 10,00</p>
+                <div class="grade-botoes">
+                    <button 
+                        class="btn-sim" 
+                        onclick="finalizar(true)"
+                    >SIM (+ R$ 10)</button>
+                    <button 
+                        class="btn-nao" 
+                        onclick="finalizar(false)"
+                    >NÃO (SÓ LANCHE)</button>
+                </div>
+            </div>
+
+            <div 
+                id="tela-final" 
+                class="tela" 
+                style="display: none;"
+            >
+                <div class="cupom">
+                    <h3>PEDIDO FINALIZADO</h3>
+                    <hr>
+                    <p id="res-nome"></p>
+                    <p id="res-item"></p>
+                    <p id="res-total" class="total"></p>
+                    <hr>
+                </div>
+                <button 
+                    class="btn-proximo" 
+                    onclick="reiniciar()"
+                >NOVO PEDIDO</button>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>

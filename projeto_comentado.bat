@@ -44,6 +44,9 @@ echo LINHA 1: Nome: > equipe.txt
 ::ESCREVER NOVA LINHA NO ARQUIVO
 echo LINHA 2: %nome% >> equipe.txt
 
+::ABRIR O TXT
+start equipe.txt
+
 ::EXIBIR MENSAGEM DE CONCLUSÃO
 echo Ambiente configurado com sucesso!
 

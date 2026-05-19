@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estrutura do Totem */
+.totem {
+    width: 380px;
+    background-color: #333;
+    border: 4px solid #f97316;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    color: #f97316;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Elementos de Entrada e Texto */
+h2 {
+    margin-bottom: 15px;
+    color: #f97316;
+}
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    background-color: #eee;
+    font-size: 16px;
+    outline: none;
+}
+input:focus {
+    border-color: #f97316;
+}
+/* Grade de Botões (Navegação) */
+.grade-botoes {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 18px;
+    border-radius: 12px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Estilos Específicos de Botões */
+.btn-proximo {
+    background-color: #f97316;
+    color: white;
+    width: 100%;
+}
+.grade-botoes button {
+    background-color: #444;
+    color: white;
+    border: 2px solid #555;
+}
+.grade-botoes button:hover {
+    background-color: #f97316;
+    border-color: white;
+}
+.btn-sim {
+    background-color: #22c55e !important;
+    color: white;
+}
+.btn-nao {
+    background-color: #ef4444 !important;
+    color: white;
+}
+
+/* Visual do Cupom Fiscal */
+.cupom {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-left: 5px dashed #f97316;
+}
+.cupom h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.total {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f97316;
+    margin-top: 10px;
+    text-align: center;
+}
