@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<title>Senai | Lógica da Programação</title>
+		<style>
+			:root {
+				color-scheme: dark;
+				--bg: #0b1020;
+				--bg-soft: #121a33;
+				--card: rgba(18, 26, 51, 0.84);
+				--card-border: rgba(255, 255, 255, 0.1);
+				--text: #eef2ff;
+				--muted: #aab4d6;
+				--accent: #ff9f1c;
+				--accent-2: #5eead4;
+				--shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				min-height: 100vh;
+				font-family: "Segoe UI", Tahoma, sans-serif;
+				color: var(--text);
+				background:
+					radial-gradient(
+						circle at top left,
+						rgba(94, 234, 212, 0.18),
+						transparent 30%
+					),
+					radial-gradient(
+						circle at top right,
+						rgba(255, 159, 28, 0.2),
+						transparent 28%
+					),
+					linear-gradient(160deg, var(--bg) 0%, #0f1730 45%, #090d18 100%);
+			}
+
+			main {
+				width: min(1120px, calc(100% - 32px));
+				margin: 0 auto;
+				padding: 48px 0 56px;
+			}
+
+			.hero {
+				display: grid;
+				gap: 18px;
+				padding: 28px;
+				margin-bottom: 28px;
+				border: 1px solid var(--card-border);
+				border-radius: 24px;
+				background: linear-gradient(
+					180deg,
+					rgba(18, 26, 51, 0.9),
+					rgba(18, 26, 51, 0.72)
+				);
+				box-shadow: var(--shadow);
+				backdrop-filter: blur(14px);
+			}
+
+			.eyebrow {
+				margin: 0;
+				color: var(--accent-2);
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				font-size: 0.78rem;
+				font-weight: 700;
+			}
+
+			h1 {
+				margin: 0;
+				font-size: clamp(2rem, 4vw, 3.5rem);
+				line-height: 1.05;
+			}
+
+			.hero p {
+				margin: 0;
+				max-width: 70ch;
+				color: var(--muted);
+				font-size: 1.03rem;
+				line-height: 1.7;
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+				gap: 18px;
+			}
+
+			.section-title {
+				margin: 30px 0 14px;
+				font-size: 1.1rem;
+				color: #dce3ff;
+			}
+
+			.card {
+				display: flex;
+				flex-direction: column;
+				gap: 14px;
+				min-height: 100%;
+				padding: 20px;
+				border-radius: 20px;
+				border: 1px solid var(--card-border);
+				background: var(--card);
+				box-shadow: var(--shadow);
+				text-decoration: none;
+				color: inherit;
+				transition:
+					transform 0.2s ease,
+					border-color 0.2s ease,
+					background 0.2s ease;
+			}
+
+			.card:hover,
+			.card:focus-visible {
+				transform: translateY(-4px);
+				border-color: rgba(94, 234, 212, 0.45);
+				background: rgba(21, 31, 60, 0.94);
+				outline: none;
+			}
+
+			.card .tag {
+				display: inline-flex;
+				width: fit-content;
+				padding: 6px 10px;
+				border-radius: 999px;
+				background: rgba(255, 159, 28, 0.16);
+				color: #ffd79e;
+				font-size: 0.78rem;
+				font-weight: 700;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+			}
+
+			.card h2 {
+				margin: 0;
+				font-size: 1.18rem;
+			}
+
+			.card p {
+				margin: 0;
+				color: var(--muted);
+				line-height: 1.65;
+			}
+
+			.meta {
+				margin-top: auto;
+				color: #c9d2f3;
+				font-size: 0.92rem;
+			}
+
+			.footer {
+				margin-top: 28px;
+				color: var(--muted);
+				font-size: 0.92rem;
+				line-height: 1.6;
+			}
+
+			.footer a {
+				color: var(--accent-2);
+			}
+
+			@media (max-width: 640px) {
+				main {
+					width: min(100% - 20px, 1120px);
+					padding: 20px 0 36px;
+				}
+
+				.hero,
+				.card {
+					border-radius: 18px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section class="hero">
+				<p class="eyebrow">SENAI · Lógica da Programação</p>
+				<h1>Índice dos pequenos sistemas</h1>
+				<p>
+					Este espaço reúne exemplos e exercícios feitos em sala de aula, além das
+					avaliações práticas do ambiente. Use os cartões abaixo para abrir cada
+					sistema ou consultar a documentação correspondente.
+				</p>
+			</section>
+
+			<h2 class="section-title">Sala de aula</h2>
+			<section class="grid">
+				<a
+					class="card"
+					href="calculadora/index.html"
+				>
+					<span class="tag">Ferramenta</span>
+					<h2>Calculadora</h2>
+					<p>
+						Interface simples para operações básicas, construída com HTML, CSS e
+						JavaScript.
+					</p>
+					<span class="meta">Abrir sistema</span>
+				</a>
+
+				<a
+					class="card"
+					href="burger-kitchen/index.html"
+				>
+					<span class="tag">Projeto</span>
+					<h2>Burger Kitchen</h2>
+					<p>
+						Painel de cozinha para acompanhar pedidos, estados e fluxo de preparo.
+					</p>
+					<span class="meta">Abrir sistema</span>
+				</a>
+
+				<a
+					class="card"
+					href="projeto-burger-tech-web/index.html"
+				>
+					<span class="tag">Projeto</span>
+					<h2>Burger Tech Web</h2>
+					<p>
+						Versão web do sistema de pedidos com cálculo de combo e cupom visual.
+					</p>
+					<span class="meta">Abrir sistema</span>
+				</a>
+			</section>
+
+			<h2 class="section-title">Avaliações práticas</h2>
+			<section class="grid">
+				<a
+					class="card"
+					href="projeto_burger_tech/README.md"
+				>
+					<span class="tag">Avaliação</span>
+					<h2>Projeto Burger Tech</h2>
+					<p>
+						Versão em Batch da avaliação prática, com fluxo de pedido e cupom fiscal.
+					</p>
+					<span class="meta">Abrir documentação</span>
+				</a>
+
+				<a
+					class="card"
+					href="projeto-burger-tech-web/index.html"
+				>
+					<span class="tag">Avaliação</span>
+					<h2>Burger Tech Web</h2>
+					<p>Versão web da avaliação prática com combo, cálculo e cupom visual.</p>
+					<span class="meta">Abrir sistema</span>
+				</a>
+			</section>
+
+			<h2 class="section-title">Exemplos e exercícios</h2>
+			<section class="grid">
+				<a
+					class="card"
+					href="aula06.html"
+				>
+					<span class="tag">Exercício</span>
+					<h2>Aula 06</h2>
+					<p>Exemplo de entrada de dados e soma de valores com validação básica.</p>
+					<span class="meta">Abrir página</span>
+				</a>
+
+				<a
+					class="card"
+					href="basico.html"
+				>
+					<span class="tag">Exercício</span>
+					<h2>Basico</h2>
+					<p>
+						Página de estudo com elementos HTML, formulários e interação simples.
+					</p>
+					<span class="meta">Abrir página</span>
+				</a>
+
+				<a
+					class="card"
+					href="teste.html"
+				>
+					<span class="tag">Teste</span>
+					<h2>Teste</h2>
+					<p>Rascunho de lógica e mensagens para observar comportamento em tela.</p>
+					<span class="meta">Abrir página</span>
+				</a>
+			</section>
+
+			<h2 class="section-title">Documentação</h2>
+			<section class="grid">
+				<a
+					class="card"
+					href="README.md"
+				>
+					<span class="tag">Leia-me</span>
+					<h2>README principal</h2>
+					<p>
+						Resumo do conjunto de projetos, estrutura do repositório e orientação de
+						navegação.
+					</p>
+					<span class="meta">Abrir documentação</span>
+				</a>
+
+				<a
+					class="card"
+					href="SA-Logica-do-sanduiche.md"
+				>
+					<span class="tag">Contexto</span>
+					<h2>SA Lógica do sanduíche</h2>
+					<p>
+						Enunciado e requisitos do desafio que orienta os projetos Burger Tech.
+					</p>
+					<span class="meta">Abrir documento</span>
+				</a>
+			</section>
+
+			<div class="footer">
+				Navegação local para estudo. Se quiser, posso transformar este índice em uma
+				página com busca ou agrupar os projetos por dificuldade.
+			</div>
+		</main>
+	</body>
+</html>
